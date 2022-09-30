@@ -1,6 +1,24 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Prefabs/Camera/PlayerPlaceholder.prefab.meta
 guid: 25d0fd3f2943b434690c22f23a1c9680
 PrefabImporter:
+=======
+guid: 10f1dd4cfd6afb54da274d7d818bd8f6
+AssemblyDefinitionImporter:
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/BOXOPHOBIC/Utils/Editor/Boxophobic.Utils.Editor.asmdef.meta
+=======
+<<<<<<< HEAD
+guid: 25d0fd3f2943b434690c22f23a1c9680
+=======
+<<<<<<< HEAD:Assets/Prefabs/Entity/Ennemy_Entity.prefab.meta
+guid: e2a8a97277df0b945883b8d741027549
+=======
+guid: 25d0fd3f2943b434690c22f23a1c9680
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Prefabs/Camera/PlayerPlaceholder.prefab.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+PrefabImporter:
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
   externalObjects: {}
   userData: 
   assetBundleName: 

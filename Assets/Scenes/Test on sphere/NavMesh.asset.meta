@@ -1,8 +1,43 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Scenes/Test on sphere/NavMesh.asset.meta
+guid: 20a46a8f18fd944488c6a7ece94a5e50
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 20a46a8f18fd944488c6a7ece94a5e50
+=======
+<<<<<<< HEAD:Assets/Materials/Earth.mat.meta
+guid: c1678128a659f401c87caa49bddec508
+=======
+guid: 20a46a8f18fd944488c6a7ece94a5e50
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Scenes/Test on sphere/NavMesh.asset.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+=======
+<<<<<<< HEAD
+guid: 410e922048ca7411faa9cbc575878c7b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/PolybrushMesh24278.asset.meta
+=======
+<<<<<<< HEAD:Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Functions/Compute Rotation Y.asset.meta
+guid: 693b7d13a80c93a4e8b791a9cd5e5ab2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+=======
 guid: 20a46a8f18fd944488c6a7ece94a5e50
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 23800000
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Scenes/Test on sphere/NavMesh.asset.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
   userData: 
   assetBundleName: 
   assetBundleVariant: 

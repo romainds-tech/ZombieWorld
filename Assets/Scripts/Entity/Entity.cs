@@ -5,7 +5,6 @@ using UnityEngine;
 abstract public class Entity : MonoBehaviour
 {
 
-
     // Entity event
     public delegate void EntityEvent(Entity e);
     public event EntityEvent OnDead;
@@ -15,7 +14,7 @@ abstract public class Entity : MonoBehaviour
     Vector3 Groundnormal;
     bool OnGround = false;
     float distanceToGround;
-    float gravity = 100;
+    float gravity = 10;
     protected Rigidbody rb;
 
     // Entity stats 
@@ -60,11 +59,7 @@ abstract public class Entity : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        EntityRotation();
-        EntityMovement();
-        Jump();
-        GroundControl();
-        GravityAndRotation();
+        
     }
 
     // get object position
@@ -83,54 +78,7 @@ abstract public class Entity : MonoBehaviour
     // Entity moving
     // ---------------------------------------------------------------
 
-    protected abstract void EntityMovement();
 
-    protected abstract void EntityRotation();
-
-    void Jump()
-    {
-        // Jump of the player
-        if (Input.GetKeyDown(KeyCode.Space) && OnGround == true)
-        {
-            rb.AddForce(transform.up * 40000 * jumpHeight * Time.deltaTime);
-
-        }
-    }
-
-    void GroundControl()
-    {
-        //GroundControl
-        RaycastHit hit = new RaycastHit();
-        if (Physics.Raycast(transform.position, -transform.up, out hit, 10))
-        {
-
-            distanceToGround = hit.distance;
-            Groundnormal = hit.normal;
-
-            if (distanceToGround <= 0.2f)
-            {
-                OnGround = true;
-                return;
-            }
-
-        }
-
-        OnGround = false;
-    }
-
-    void GravityAndRotation()
-    {
-        //GRAVITY and ROTATION
-        Vector3 gravDirection = (transform.position - Planet.transform.position).normalized;
-        if (OnGround == false)
-        {
-            rb.AddForce(gravDirection * -gravity);
-        }
-
-        // Rotation of the player to the planet
-        Quaternion toRotation = Quaternion.FromToRotation(transform.up, Groundnormal) * transform.rotation;
-        transform.rotation = toRotation;
-    }
 
     // ---------------------------------------------------------------
     // Entity actions

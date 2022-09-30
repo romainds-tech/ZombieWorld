@@ -51,28 +51,15 @@ public class IA_Entity : Entity
 
     }
 
-    // move entity
-    protected override void EntityMovement()
-    {
-        Vector3 diff = GetGameObjectPostition(target) - GetGameObjectPostition(this.gameObject);
-        diff.Normalize();
+    // ---------------------------------------------------------------
+    // Entity moving
+    // ---------------------------------------------------------------
 
-        float x = diff.x * speed * Time.deltaTime;
-        float y = diff.z * speed * Time.deltaTime;
 
-        transform.position += diff * speed * Time.deltaTime;
-    }
+    // ---------------------------------------------------------------
+    // Entity actions
+    // ---------------------------------------------------------------
 
-    // Rotation to the target
-    protected override void EntityRotation()
-    {
-        Debug.Log("rotate");
-        this.transform.LookAt(target.transform);
-        this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
-        /*Vector2 lookDirection = new Vector2(GetGameObjectPostition(target).x, GetGameObjectPostition(target).z);
-        float angle = Mathf.Tan(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
-        transform.rotation = Quaternion.Euler(0, -angle, 0);*/
-    }
 
     // try to inflict damage to the target 
     private void TryAttaque()

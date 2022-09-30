@@ -1,5 +1,29 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Prefabs/Body/Boar_Body.prefab.meta
 guid: 0e5f3067f8619b547887364706a49213
+=======
+guid: a61034bf4a2d4421f850a8832965f3d0
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/Prefabs/Map.prefab.meta
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Prefabs/Body/Boar_Body.prefab.meta
+guid: 0e5f3067f8619b547887364706a49213
+=======
+guid: 559f101ada1ffb045942c8f597d4cd39
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Prefabs/Body/Human_Body.prefab.meta
+=======
+guid: 0e5f3067f8619b547887364706a49213
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+=======
+<<<<<<< HEAD:Assets/Prefabs/Camera/PlayerPlaceholder.prefab.meta
+guid: 25d0fd3f2943b434690c22f23a1c9680
+=======
+guid: 0e5f3067f8619b547887364706a49213
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Prefabs/Body/Boar_Body.prefab.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
 PrefabImporter:
   externalObjects: {}
   userData: 

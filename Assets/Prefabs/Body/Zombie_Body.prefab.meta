@@ -1,6 +1,24 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Prefabs/Body/Zombie_Body.prefab.meta
 guid: 31fe73e99181ab64988cec13c5fd3289
 PrefabImporter:
+=======
+guid: 29bc400970c5066438cbde7676418b75
+AssemblyDefinitionImporter:
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/Boxophobic.SkyboxCubemapExtended.Editor.asmdef.meta
+=======
+<<<<<<< HEAD
+guid: 31fe73e99181ab64988cec13c5fd3289
+=======
+<<<<<<< HEAD:Assets/Prefabs/Entity/Boar_Entity Variant.prefab.meta
+guid: 75607904279e5024eaf177beb55ba0cf
+=======
+guid: 31fe73e99181ab64988cec13c5fd3289
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Prefabs/Body/Zombie_Body.prefab.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+PrefabImporter:
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
   externalObjects: {}
   userData: 
   assetBundleName: 

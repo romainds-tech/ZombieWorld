@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/Test on sphere/NavMesh.asset.meta
+guid: 166f3aa4441480c42a90a7e99e6c5f04
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+=======
+guid: 410e922048ca7411faa9cbc575878c7b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4300000
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/PolybrushMesh24278.asset.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

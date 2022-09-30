@@ -1,5 +1,29 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Scripts/Entity/Player_Entity.cs.meta
 guid: f05c672dc20d32e46ae78ee751ab5ed9
+=======
+guid: 7c986bd7ffe2fa34a857eb813db03d77
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedWindows.cs.meta
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: f05c672dc20d32e46ae78ee751ab5ed9
+=======
+<<<<<<< HEAD:Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedHub.cs.meta
+guid: 749c07eaa2f91bc4f81ccd7adddcb723
+=======
+guid: f05c672dc20d32e46ae78ee751ab5ed9
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Scripts/Entity/Player_Entity.cs.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+=======
+<<<<<<< HEAD:Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Editor/SkyboxExtendedShaderGUI.cs.meta
+guid: 39b7f3695c062924983675fcef51f7f8
+=======
+guid: f05c672dc20d32e46ae78ee751ab5ed9
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Scripts/Entity/Player_Entity.cs.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

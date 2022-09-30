@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 185c70435c930f8438fcf3e6dc0fffcd
+=======
+<<<<<<< HEAD:Assets/Prefabs/Body/Human_Body.prefab.meta
+guid: 559f101ada1ffb045942c8f597d4cd39
+=======
+guid: 185c70435c930f8438fcf3e6dc0fffcd
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65:Assets/Prefabs/Entity/Player_Entity.prefab.meta
+>>>>>>> a3acb11c14656771eb8b67443479f97e9d41cf65
 PrefabImporter:
   externalObjects: {}
   userData: 
