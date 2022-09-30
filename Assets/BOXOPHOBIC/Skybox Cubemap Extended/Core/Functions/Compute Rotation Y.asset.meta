@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Functions/Compute Rotation Y.asset.meta
+guid: 693b7d13a80c93a4e8b791a9cd5e5ab2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+=======
+guid: 20a46a8f18fd944488c6a7ece94a5e50
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Scenes/Test on sphere/NavMesh.asset.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

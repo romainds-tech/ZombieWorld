@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 559f101ada1ffb045942c8f597d4cd39
+=======
+<<<<<<< HEAD:Assets/Prefabs/Body/Boar_Body.prefab.meta
+guid: 0e5f3067f8619b547887364706a49213
+=======
+guid: 559f101ada1ffb045942c8f597d4cd39
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Prefabs/Body/Human_Body.prefab.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+=======
+<<<<<<< HEAD:Assets/Prefabs/Body/Zombie_Body.prefab.meta
+guid: 31fe73e99181ab64988cec13c5fd3289
+=======
+guid: 559f101ada1ffb045942c8f597d4cd39
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42:Assets/Prefabs/Body/Human_Body.prefab.meta
+>>>>>>> 9f199a735c591351f698447c02a57840278ead42
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
