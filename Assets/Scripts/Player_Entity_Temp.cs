@@ -19,8 +19,7 @@ public class Player_Entity_Temp : Entity_Temp
     void Update()
     {
         // Player rotation
-        playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
-        transform.rotation = transform.rotation;
+        /*playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);*/
     }
 
     protected override void calculSpeed()
