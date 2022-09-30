@@ -238,7 +238,7 @@ MonoBehaviour:
   planet: {fileID: 912793263}
   alignToPlanet: 1
   target: {fileID: 756415296}
-  targetMinDistance: 1
+  targetMinDistance: 2
   targetMaxDistance: 30
 --- !u!1 &380095327
 GameObject:
