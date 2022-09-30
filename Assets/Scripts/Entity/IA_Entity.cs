@@ -15,7 +15,6 @@ public class IA_Entity : Entity
     // Start is called before the first frame update
     protected new void Start()
     {
-        /*this.MoveToTarget();*/
         base.Start();
         targetEntity = target.GetComponent("Entity") as Entity;
         targetEntity.OnDead += TargetIsDead;
@@ -32,20 +31,17 @@ public class IA_Entity : Entity
         float dist = Vector3.Distance(GetGameObjectPostition(target), GetGameObjectPostition(this.gameObject));
 
         // if out of range, nothing
-        if (dist > this.targetMaxDistance)
-        {
+        if (dist > this.targetMaxDistance) {
             return;
         }
 
         // if to far, run to target
-        if(dist > this.targetMinDistance)
-        {
+        if(dist > this.targetMinDistance) {
             base.Update();
         }
 
         // if arround, attaque
-        if (dist < this.targetMinDistance)
-        {
+        if (dist < this.targetMinDistance) {
             this.TryAttaque();
         }
 

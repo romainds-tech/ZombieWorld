@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Entity_Data : ScriptableObject
 {
-    private float life;
+    public float life;
     public float damage;
     public float attaqueDelay;
     public float attaqueReload;
