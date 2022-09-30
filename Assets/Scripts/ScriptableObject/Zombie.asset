@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 20
   damage: 1
-  attaqueDelay: 1.5
-  attaqueReload: 2
+  attaqueDelay: 1
+  attaqueReload: 0
   speed: 4
   jumpHeight: 0
   canJump: 0
