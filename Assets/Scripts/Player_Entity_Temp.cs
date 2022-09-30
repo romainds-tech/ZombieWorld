@@ -9,7 +9,11 @@ public class Player_Entity_Temp : Entity_Temp
 {
 
     public Camera playerCamera;
-    
+
+    // ---------------------------------------------------------------
+    // Entity utils
+    // ---------------------------------------------------------------
+
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;

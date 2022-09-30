@@ -12,6 +12,10 @@ public class IA_Entity_Temp : Entity_Temp {
     public float targetMinDistance = 1f;
     public float targetMaxDistance = 30f;
 
+    // ---------------------------------------------------------------
+    // Entity utils
+    // ---------------------------------------------------------------
+
     // Start is called before the first frame update
     protected new void Start()
     {
@@ -53,10 +57,18 @@ public class IA_Entity_Temp : Entity_Temp {
 
     protected override void calculMovement()
     {
-        /* // Calculate how fast we should be moving
-         Vector3 forwardDir = Vector3.Cross(transform.up, -playerCamera.transform.right).normalized;
-         Vector3 rightDir = Vector3.Cross(transform.up, playerCamera.transform.forward).normalized;
-         targetVelocity = (forwardDir * Input.GetAxis("Vertical") + rightDir * Input.GetAxis("Horizontal")) * playerData.speed;*/
+        // position
+        Vector3 diff = GetGameObjectPostition(target) - GetGameObjectPostition(this.gameObject);
+        diff.Normalize();
+
+        float x = diff.x;
+        float y = diff.z;
+
+        transform.position += diff * entityData.speed * Time.deltaTime;
+
+        // rotation
+        this.transform.LookAt(target.transform);
+        this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
     }
 
     // ---------------------------------------------------------------
