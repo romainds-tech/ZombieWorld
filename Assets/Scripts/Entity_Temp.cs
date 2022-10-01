@@ -90,7 +90,6 @@ public abstract class Entity_Temp : MonoBehaviour
 
     protected void Move()
     {
-
         ProcessGravity();
         calculRotation();
         calculMovement();
@@ -106,12 +105,11 @@ public abstract class Entity_Temp : MonoBehaviour
         toCenter.Normalize();
 
         r.AddForce(toCenter * gravityConstant, ForceMode.Acceleration);
-        
 
-        if (!grounded)
-        {
-            return;
-        }
+        Quaternion q = Quaternion.FromToRotation(transform.up, -toCenter);
+        q = q * transform.rotation;
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, 1);
+
     }
 
     protected abstract void calculMovement();
@@ -122,6 +120,7 @@ public abstract class Entity_Temp : MonoBehaviour
         Vector3 velocity = transform.InverseTransformDirection(r.velocity);
         velocity.y = 0;
         velocity = transform.TransformDirection(velocity);
+
         Vector3 velocityChange = transform.InverseTransformDirection(targetVelocity - velocity);
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
