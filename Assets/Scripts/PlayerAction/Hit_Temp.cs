@@ -8,8 +8,6 @@ public class Hit_Temp : MonoBehaviour
     public Player_Entity_Temp player;
     private List<IA_Entity_Temp> _currentTriggers = new List<IA_Entity_Temp>();
 
-    public float attaqueDelay = 1f;
-
     // Update is called once per frame
     void Update()
     {
@@ -18,7 +16,11 @@ public class Hit_Temp : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) {
 
+            Debug.Log("player try attack");
+
             if (player.attaqueReload < 0) {
+
+                Debug.Log("can attack");
 
                 player.attaqueReload = player.entityData.attaqueDelay;
 

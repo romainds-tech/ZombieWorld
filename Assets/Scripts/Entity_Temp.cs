@@ -90,9 +90,12 @@ public abstract class Entity_Temp : MonoBehaviour
 
     protected void Move()
     {
-        ProcessGravity();
+        
         calculRotation();
         calculMovement();
+
+        ProcessGravity();
+
         applyMovement();
         Jump();
 
@@ -151,7 +154,9 @@ public abstract class Entity_Temp : MonoBehaviour
     public void Attaque(Entity_Temp e)
     {
         e.Life = e.Life - this.entityData.damage;
-        e.OnTakeDamage.Invoke(e);
+        if(e.Life > 0) {
+            e.OnTakeDamage.Invoke(e);
+        }
         this.entityData.attaqueDelay = 1;
     }
 
