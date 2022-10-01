@@ -71,6 +71,13 @@ public class IA_Entity_Temp : Entity_Temp {
         this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
     }
 
+    protected override void calculRotation()
+    {
+        // focus on player position
+        this.transform.LookAt(target.transform);
+        this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
+    }
+
     // ---------------------------------------------------------------
     // Entity actions
     // ---------------------------------------------------------------

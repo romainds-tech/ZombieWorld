@@ -38,7 +38,6 @@ public abstract class Entity_Temp : MonoBehaviour
 
     // Entity moving
     public Transform planet;
-    public bool alignToPlanet = true;
 
     protected Vector3 targetVelocity;
     protected float maxVelocityChange = 10.0f;
@@ -89,6 +88,7 @@ public abstract class Entity_Temp : MonoBehaviour
     {
 
         ProcessGravity();
+        calculRotation();
         calculMovement();
         applyMovement();
         Jump();
@@ -102,13 +102,7 @@ public abstract class Entity_Temp : MonoBehaviour
         toCenter.Normalize();
 
         r.AddForce(toCenter * gravityConstant, ForceMode.Acceleration);
-
-        if (alignToPlanet)
-        {
-            Quaternion q = Quaternion.FromToRotation(transform.up, -toCenter);
-            q = q * transform.rotation;
-            transform.rotation = Quaternion.Slerp(transform.rotation, q, 1);
-        }
+        
 
         if (!grounded)
         {
@@ -117,6 +111,7 @@ public abstract class Entity_Temp : MonoBehaviour
     }
 
     protected abstract void calculMovement();
+    protected abstract void calculRotation();
 
     protected void applyMovement()
     {
