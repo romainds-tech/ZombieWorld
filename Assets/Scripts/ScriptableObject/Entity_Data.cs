@@ -5,10 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Entity_Data : ScriptableObject
 {
-    public float life;
     public float damage;
     public float attaqueDelay;
-    public float attaqueReload;
     public float speed;
     public float jumpHeight;
     public bool canJump;

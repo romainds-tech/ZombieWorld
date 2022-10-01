@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 297260769397853653, guid: e2a8a97277df0b945883b8d741027549, type: 3}
       propertyPath: m_Name
-      value: Boar_Entity
+      value: Boar_Entity Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 395160988561805439, guid: e2a8a97277df0b945883b8d741027549, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2234252359897893794, guid: e2a8a97277df0b945883b8d741027549, type: 3}
       propertyPath: m_RootOrder
@@ -56,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571983551043035492, guid: e2a8a97277df0b945883b8d741027549, type: 3}
+      propertyPath: entityData
+      value: 
+      objectReference: {fileID: 11400000, guid: f2b09bb85af3f64478e5d03337467f89, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2234252359897893794, guid: e2a8a97277df0b945883b8d741027549, type: 3}

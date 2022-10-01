@@ -14,22 +14,21 @@ public class Hit_Temp : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(_currentTriggers.Count);
+        player.attaqueReload -= Time.deltaTime;
 
-        player.entityData.attaqueReload -= Time.deltaTime;
+        if (Input.GetMouseButtonDown(0)) {
 
-        if (player.entityData.attaqueReload < 0) {
+            if (player.attaqueReload < 0) {
 
-            player.entityData.attaqueReload = player.entityData.attaqueDelay;
-            Debug.Log("player can attack");
+                player.attaqueReload = player.entityData.attaqueDelay;
 
-            foreach (IA_Entity_Temp ennemy in _currentTriggers.ToArray()) {
-                Debug.Log("player prepare attack");
+                Debug.Log("player attack");
 
+                foreach (IA_Entity_Temp ennemy in _currentTriggers.ToArray()) {
 
-                if (ennemy) {
-                    Debug.Log("player attack");
-                    player.Attaque(ennemy);
+                    if (ennemy) {
+                        player.Attaque(ennemy);
+                    }
                 }
             }
         }
@@ -57,12 +56,8 @@ public class Hit_Temp : MonoBehaviour
         }
 
         if (!_currentTriggers.Contains(ennemy)) {
-            Debug.Log(other.gameObject.name);
-            Debug.Log("trigger add");
-
             ennemy.OnDead += ForgetAboutEnnemy;
             _currentTriggers.Add(ennemy);
-            
         }
 
     }
@@ -72,9 +67,6 @@ public class Hit_Temp : MonoBehaviour
     {
         IA_Entity_Temp ennemy = other.gameObject.GetComponent<IA_Entity_Temp>();
         ForgetAboutEnnemy(ennemy);
-
-        Debug.Log("trigger remove");
-        Debug.Log(_currentTriggers.Count);
     }
     
 }

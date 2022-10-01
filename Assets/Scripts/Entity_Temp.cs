@@ -8,6 +8,7 @@ public abstract class Entity_Temp : MonoBehaviour
     // Entity data 
     public Entity_Data entityData;
 
+    public float life = 20f;
     public float Life
     {
         get => GetLife();
@@ -16,21 +17,23 @@ public abstract class Entity_Temp : MonoBehaviour
 
     private float GetLife()
     {
-        return this.entityData.life;
+        return this.life;
     }
 
     private void SetLife(float life)
     {
 
-        this.entityData.life = life;
+        this.life = life;
 
         if (this.Life < 0)
         {
-            this.entityData.life = 0;
+            this.life = 0;
             this.Die();
         }
 
     }
+
+    public float attaqueReload = 0;
 
     // Entity event
     public delegate void EntitEvent(Entity_Temp e);

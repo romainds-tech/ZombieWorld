@@ -80,11 +80,11 @@ public class IA_Entity_Temp : Entity_Temp {
     private void TryAttaque()
     {
 
-        this.entityData.attaqueReload -= Time.deltaTime;
+        this.attaqueReload -= Time.deltaTime;
 
-        if (this.entityData.attaqueReload < 0)
+        if (this.attaqueReload < 0)
         {
-            this.entityData.attaqueReload = this.entityData.attaqueDelay;
+            this.attaqueReload = this.entityData.attaqueDelay;
             this.Attaque(targetEntity);
         }
     }

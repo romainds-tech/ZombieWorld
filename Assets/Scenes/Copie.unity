@@ -225,6 +225,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7306105287039273536, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 912793263}
+    - target: {fileID: -7306105287039273536, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1451170985}
+    - target: {fileID: -7306105287039273536, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
+      propertyPath: entityData
+      value: 
+      objectReference: {fileID: 11400000, guid: f2b09bb85af3f64478e5d03337467f89, type: 2}
     - target: {fileID: 762116921480891554, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -232,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 849039057720774920, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
       propertyPath: m_Name
       value: Boar_Entity Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 849039057720774920, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1218743978727675775, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
       propertyPath: m_RootOrder
@@ -280,29 +296,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
---- !u!1 &648973790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 849039057720774920, guid: 75607904279e5024eaf177beb55ba0cf, type: 3}
-  m_PrefabInstance: {fileID: 648973789}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &648973791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648973790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c3c71747e6c3874aa27074a075e3bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityData: {fileID: 11400000, guid: f2b09bb85af3f64478e5d03337467f89, type: 2}
-  planet: {fileID: 912793263}
-  alignToPlanet: 1
-  target: {fileID: 1451170985}
-  targetMinDistance: 1
-  targetMaxDistance: 30
 --- !u!43 &672444567
 Mesh:
   m_ObjectHideFlags: 0
@@ -616,6 +609,10 @@ PrefabInstance:
     - target: {fileID: 7506247827639946801, guid: 3ec28ab8773101b4e9d31f9008ed1348, type: 3}
       propertyPath: m_Name
       value: Zombie_Entity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506247827639946801, guid: 3ec28ab8773101b4e9d31f9008ed1348, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8289492036521969734, guid: 3ec28ab8773101b4e9d31f9008ed1348, type: 3}
       propertyPath: m_RootOrder
