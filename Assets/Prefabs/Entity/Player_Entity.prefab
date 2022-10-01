@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8591383125728911610}
   - component: {fileID: 2004251749617353995}
   - component: {fileID: 1778519437858073113}
-  - component: {fileID: 6467987044721844548}
   - component: {fileID: 1165272191370934499}
   m_Layer: 0
   m_Name: Player_Entity
@@ -81,24 +80,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6467987044721844548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524519352785326129}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f05c672dc20d32e46ae78ee751ab5ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Planet: {fileID: 0}
-  speed: 4
-  jumpHeight: 1.2
-  damage: 20
-  attaqueDelay: 1
-  attaqueReload: 0
 --- !u!114 &1165272191370934499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 03ed2cf54df91c642b6717c12ce055bc, type: 2}
+  life: 20
+  attaqueReload: 0
   planet: {fileID: 0}
   alignToPlanet: 1
 --- !u!1 &3605308194918583458

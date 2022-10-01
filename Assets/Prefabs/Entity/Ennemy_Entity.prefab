@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2234252359897893794}
   - component: {fileID: 8385099861238971678}
   - component: {fileID: 1781150366007417071}
-  - component: {fileID: 395160988561805439}
+  - component: {fileID: 6571983551043035492}
   m_Layer: 0
   m_Name: Ennemy_Entity
   m_TagString: Untagged
@@ -63,7 +63,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &395160988561805439
+--- !u!114 &6571983551043035492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,15 +72,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 297260769397853653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f788054b35eebd64ca1735493a6dc1dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c3c71747e6c3874aa27074a075e3bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Planet: {fileID: 0}
-  speed: 4
-  jumpHeight: 1.2
-  damage: 1.5
-  attaqueDelay: 1
+  entityData: {fileID: 0}
+  life: 20
   attaqueReload: 0
+  planet: {fileID: 0}
+  alignToPlanet: 1
   target: {fileID: 0}
   targetMinDistance: 1
   targetMaxDistance: 30

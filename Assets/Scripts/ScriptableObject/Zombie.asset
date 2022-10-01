@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2248a7de8f2f53f43b95b83b794c594f, type: 3}
   m_Name: Zombie
   m_EditorClassIdentifier: 
-  life: 20
+  maxLife: 20
   damage: 1
   attaqueDelay: 1
-  attaqueReload: 0
   speed: 4
   jumpHeight: 0
   canJump: 0

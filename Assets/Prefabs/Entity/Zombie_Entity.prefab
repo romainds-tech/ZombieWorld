@@ -84,14 +84,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 395160988561805439, guid: e2a8a97277df0b945883b8d741027549, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 395160988561805439, guid: e2a8a97277df0b945883b8d741027549, type: 3}
-      propertyPath: targetMinDistance
-      value: 1.25
-      objectReference: {fileID: 0}
     - target: {fileID: 1781150366007417071, guid: e2a8a97277df0b945883b8d741027549, type: 3}
       propertyPath: m_Size.y
       value: 2.2
@@ -152,35 +144,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571983551043035492, guid: e2a8a97277df0b945883b8d741027549, type: 3}
+      propertyPath: entityData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d5df3dc53731d94ebb5e93366479cbe, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2234252359897893794, guid: e2a8a97277df0b945883b8d741027549, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1297445875266396453}
   m_SourcePrefab: {fileID: 100100000, guid: e2a8a97277df0b945883b8d741027549, type: 3}
---- !u!1 &7506247827639946801 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 297260769397853653, guid: e2a8a97277df0b945883b8d741027549, type: 3}
-  m_PrefabInstance: {fileID: 7785485402417693668}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-8261366858741727974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7506247827639946801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c3c71747e6c3874aa27074a075e3bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityData: {fileID: 11400000, guid: 3d5df3dc53731d94ebb5e93366479cbe, type: 2}
-  planet: {fileID: 0}
-  alignToPlanet: 1
-  target: {fileID: 0}
-  targetMinDistance: 1
-  targetMaxDistance: 30
 --- !u!4 &8289492036521969734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2234252359897893794, guid: e2a8a97277df0b945883b8d741027549, type: 3}

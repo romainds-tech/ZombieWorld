@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2248a7de8f2f53f43b95b83b794c594f, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  life: 20
+  maxLife: 20
   damage: 50
-  attaqueDelay: 1
-  attaqueReload: 0
+  attaqueDelay: 5
   speed: 5
   jumpHeight: 1.2
   canJump: 0
