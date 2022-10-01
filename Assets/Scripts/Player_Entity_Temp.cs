@@ -22,7 +22,10 @@ public class Player_Entity_Temp : Entity_Temp
 
     protected override void calculMovement()
     {
-        // Calculate how fast we should be moving
+        // player rotation
+        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * entityData.speed, 0), Space.Self) ;
+
+        // player translation
         Vector3 forwardDir = Vector3.Cross(transform.up, -playerCamera.transform.right).normalized;
         Vector3 rightDir = Vector3.Cross(transform.up, playerCamera.transform.forward).normalized;
         targetVelocity = (forwardDir * Input.GetAxis("Vertical") + rightDir * Input.GetAxis("Horizontal")) * entityData.speed;
