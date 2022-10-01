@@ -8,7 +8,7 @@ public abstract class Entity_Temp : MonoBehaviour
     // Entity data 
     public Entity_Data entityData;
 
-    public float life = 20f;
+    public float life;
     public float Life
     {
         get => GetLife();
@@ -22,10 +22,9 @@ public abstract class Entity_Temp : MonoBehaviour
 
     private void SetLife(float life)
     {
-
         this.life = life;
 
-        if (this.Life < 0)
+        if (this.Life <= 0)
         {
             this.life = 0;
             this.Die();
@@ -36,8 +35,9 @@ public abstract class Entity_Temp : MonoBehaviour
     public float attaqueReload = 0;
 
     // Entity event
-    public delegate void EntitEvent(Entity_Temp e);
-    public event EntitEvent OnDead;
+    public delegate void EntityEvent(Entity_Temp e);
+    public event EntityEvent OnDead;
+    public event EntityEvent OnTakeDamage;
 
     // Entity moving
     public Transform planet;
@@ -59,6 +59,7 @@ public abstract class Entity_Temp : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
+        this.Life = entityData.maxLife;
         r = GetComponent<Rigidbody>();
         r.freezeRotation = true;
         r.useGravity = false;
@@ -156,6 +157,7 @@ public abstract class Entity_Temp : MonoBehaviour
     public void Attaque(Entity_Temp e)
     {
         e.Life = e.Life - this.entityData.damage;
+        e.OnTakeDamage.Invoke(e);
         this.entityData.attaqueDelay = 1;
     }
 
