@@ -21,12 +21,8 @@ public class IA_Entity : Entity {
     protected new void Start()
     {
         base.Start();
-        this.target = GameController.Instance.player.gameObject;
-        Debug.Log(GameController.Instance.player.Life);
-        targetEntity = GameController.Instance.player;
-        targetEntity.OnDead += TargetIsDead;
-        // NewTarget(GameController.Instance.player);
-        // GameController.Instance.player.OnSpawn += NewTarget;
+        NewTarget(GameController.Instance.player);
+        GameController.Instance.PlayerSpawn += NewTarget;
     }
 
     // Update is called once per frame
@@ -45,16 +41,18 @@ public class IA_Entity : Entity {
         // if arround, attaque
         if (dist < this.targetMinDistance)
         {
-            this.TryAttaque();
+            this.TryAttaque(targetEntity);
         }
 
     }
 
     private void NewTarget(Entity e)
     {
-        Debug.Log("new target");
-        this.target = GameController.Instance.player.gameObject;
-        targetEntity = GameController.Instance.player as Entity;
+        targetIsDead = false;
+
+        this.target = e.gameObject;
+        targetEntity = e;
+
         targetEntity.OnDead += TargetIsDead;
 
     }
@@ -99,7 +97,7 @@ public class IA_Entity : Entity {
 
 
     // try to inflict damage to the target 
-    private void TryAttaque()
+    private void TryAttaque(Entity e)
     {
 
         this.attaqueReload -= Time.deltaTime;
@@ -107,7 +105,7 @@ public class IA_Entity : Entity {
         if (this.attaqueReload < 0)
         {
             this.attaqueReload = this.entityData.attaqueDelay;
-            this.Attaque(targetEntity);
+            this.Attaque(e);
         }
     }
 

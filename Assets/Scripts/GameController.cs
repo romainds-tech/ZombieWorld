@@ -22,6 +22,10 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public delegate void GameEvent(Entity e);
+    public event GameEvent PlayerDeath;
+    public event GameEvent PlayerSpawn;
+
     public Player_Entity playerModel;
     public IA_Entity ZombieModel;
 
@@ -41,5 +45,19 @@ public class GameController : MonoBehaviour
         EntityController.Instance.SpawnPlayer();
         EntityController.Instance.SpawnZombie();
     }
+
+    public void MakePlayerSpawn()
+    {
+        this.player.OnDead += TriggerPlayerDead;
+        EntityController.Instance.SpawnPlayer();
+        PlayerSpawn.Invoke(player);
+    }
+
+    void TriggerPlayerDead(Entity e)
+    {
+        PlayerDeath.Invoke(player);
+    }
+
+
 
 }

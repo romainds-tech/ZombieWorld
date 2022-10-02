@@ -7,7 +7,7 @@ public class Death_Panel : MonoBehaviour
 
     public void Revive()
     {
-        EntityController.Instance.SpawnPlayer();
+        GameController.Instance.MakePlayerSpawn();
         this.gameObject.SetActive(false);
     }
 
