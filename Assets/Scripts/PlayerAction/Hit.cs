@@ -8,28 +8,29 @@ public class Hit : MonoBehaviour
     public Player_Entity player;
     private List<IA_Entity> _currentTriggers = new List<IA_Entity>();
 
-    public float attaqueDelay = 1f;
-
     // Update is called once per frame
     void Update()
     {
 
-        Debug.Log(_currentTriggers.Count);
-
         player.attaqueReload -= Time.deltaTime;
 
-        if (player.attaqueReload < 0) {
+        if (Input.GetMouseButtonDown(0)) {
 
-            player.attaqueReload = this.attaqueDelay;
-            Debug.Log("player can attack");
+            Debug.Log("player try attack");
 
-            foreach (IA_Entity ennemy in _currentTriggers.ToArray()) {
-                Debug.Log("player prepare attack");
+            if (player.attaqueReload < 0) {
 
+                Debug.Log("can attack");
 
-                if (ennemy) {
-                    Debug.Log("player attack");
-                    player.Attaque(ennemy);
+                player.attaqueReload = player.entityData.attaqueDelay;
+
+                Debug.Log("player attack");
+
+                foreach (IA_Entity ennemy in _currentTriggers.ToArray()) {
+
+                    if (ennemy) {
+                        player.Attaque(ennemy);
+                    }
                 }
             }
         }
@@ -57,12 +58,8 @@ public class Hit : MonoBehaviour
         }
 
         if (!_currentTriggers.Contains(ennemy)) {
-            Debug.Log(other.gameObject.name);
-            Debug.Log("trigger add");
-
             ennemy.OnDead += ForgetAboutEnnemy;
             _currentTriggers.Add(ennemy);
-            
         }
 
     }
@@ -72,9 +69,6 @@ public class Hit : MonoBehaviour
     {
         IA_Entity ennemy = other.gameObject.GetComponent<IA_Entity>();
         ForgetAboutEnnemy(ennemy);
-
-        Debug.Log("trigger remove");
-        Debug.Log(_currentTriggers.Count);
     }
     
 }

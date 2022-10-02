@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IA_Entity : Entity
-{
+public class IA_Entity : Entity { 
+
     public GameObject target;
     private Entity targetEntity;
 
@@ -11,6 +11,10 @@ public class IA_Entity : Entity
 
     public float targetMinDistance = 1f;
     public float targetMaxDistance = 30f;
+
+    // ---------------------------------------------------------------
+    // Entity utils
+    // ---------------------------------------------------------------
 
     // Start is called before the first frame update
     protected new void Start()
@@ -21,10 +25,10 @@ public class IA_Entity : Entity
     }
 
     // Update is called once per frame
-    protected new void Update()
+    protected new void FixedUpdate()
     {
 
-        if(targetIsDead) {
+        if (targetIsDead) {
             return;
         }
 
@@ -36,8 +40,8 @@ public class IA_Entity : Entity
         }
 
         // if to far, run to target
-        if(dist > this.targetMinDistance) {
-            base.Update();
+        if (dist > this.targetMinDistance) {
+            base.FixedUpdate();
         }
 
         // if arround, attaque
@@ -51,6 +55,25 @@ public class IA_Entity : Entity
     // Entity moving
     // ---------------------------------------------------------------
 
+    protected override void calculMovement()
+    {
+        // position
+        Vector3 diff = GetGameObjectPostition(target) - GetGameObjectPostition(this.gameObject);
+        diff.Normalize();
+
+        float x = diff.x;
+        float y = diff.z;
+
+        transform.position += diff * entityData.speed * Time.deltaTime;
+
+    }
+
+    protected override void calculRotation()
+    {
+        // rotation
+        this.transform.LookAt(target.transform);
+        this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
+    }
 
     // ---------------------------------------------------------------
     // Entity actions
@@ -65,7 +88,7 @@ public class IA_Entity : Entity
 
         if (this.attaqueReload < 0)
         {
-            this.attaqueReload = this.attaqueDelay;
+            this.attaqueReload = this.entityData.attaqueDelay;
             this.Attaque(targetEntity);
         }
     }
