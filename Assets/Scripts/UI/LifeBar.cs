@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class LifeBar : MonoBehaviour
 {
 
-    public Entity player;
     private Slider lifeBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        Player_Entity player = GameController.Instance.player;
         player.OnTakeDamage += UpdateLife;
         lifeBar = this.gameObject.GetComponent<Slider>() as Slider;
     }
 
     void UpdateLife(Entity e)
     {
-        this.lifeBar.value = player.Life / player.entityData.maxLife;
+        this.lifeBar.value = e.Life / e.entityData.maxLife;
     }
 }

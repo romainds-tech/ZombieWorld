@@ -36,9 +36,10 @@ public abstract class Entity : MonoBehaviour
 
     // Entity event
     public delegate void EntityEvent(Entity e);
-    public event EntityEvent OnDead;
+    public event EntityEvent OnSpawn;
     public event EntityEvent OnTakeDamage;
-
+    public event EntityEvent OnDead;
+    
     // Entity moving
     public Transform planet;
 
@@ -64,6 +65,8 @@ public abstract class Entity : MonoBehaviour
         r.useGravity = false;
         r.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rotation.y = transform.eulerAngles.y;
+
+        // OnSpawn.Invoke(this);
     }
 
     protected void FixedUpdate()

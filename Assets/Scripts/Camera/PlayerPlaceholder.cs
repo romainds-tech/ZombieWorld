@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class PlayerPlaceholder : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject Planet;
- 
+
     // Update is called once per frame
     void Update()
     {
-        //SMOOTH
+
+        Player_Entity player_entity = GameController.Instance.player;
+        if (!player_entity) { return; }
+
+        GameObject player = player_entity.gameObject;
+        GameObject planet = GameController.Instance.planet;
  
         //POSITION
-        transform.position = Vector3.Lerp(transform.position, Player.transform.position, 0.1f);
- 
-        Vector3 gravDirection = (transform.position - Planet.transform.position).normalized;
+        transform.position = Vector3.Lerp(transform.position, player.transform.position, 0.1f);
+        Vector3 gravDirection = (transform.position - planet.transform.position).normalized;
  
         //ROTATION
         Quaternion toRotation = Quaternion.FromToRotation(transform.up, gravDirection) * transform.rotation;

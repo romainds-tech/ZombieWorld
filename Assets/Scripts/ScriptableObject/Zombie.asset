@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zombie
   m_EditorClassIdentifier: 
   maxLife: 20
-  damage: 1
+  damage: 20
   attaqueDelay: 1
   speed: 4
   jumpHeight: 0

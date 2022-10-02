@@ -9,6 +9,7 @@ public class IA_Entity : Entity {
 
     private bool targetIsDead = false;
 
+    float dist = 0;
     public float targetMinDistance = 1f;
     public float targetMaxDistance = 30f;
 
@@ -20,8 +21,8 @@ public class IA_Entity : Entity {
     protected new void Start()
     {
         base.Start();
-        targetEntity = target.GetComponent("Entity") as Entity;
-        targetEntity.OnDead += TargetIsDead;
+        NewTarget(GameController.Instance.player);
+        GameController.Instance.player.OnSpawn += NewTarget;
     }
 
     // Update is called once per frame
@@ -32,17 +33,9 @@ public class IA_Entity : Entity {
             return;
         }
 
-        float dist = Vector3.Distance(GetGameObjectPostition(target), GetGameObjectPostition(this.gameObject));
+        base.FixedUpdate();
 
-        // if out of range, nothing
-        if (dist > this.targetMaxDistance) {
-            return;
-        }
-
-        // if to far, run to target
-        if (dist > this.targetMinDistance) {
-            base.FixedUpdate();
-        }
+        dist = Vector3.Distance(GetGameObjectPostition(target), GetGameObjectPostition(this.gameObject));
 
         // if arround, attaque
         if (dist < this.targetMinDistance) {
@@ -51,12 +44,26 @@ public class IA_Entity : Entity {
 
     }
 
+    private void NewTarget(Entity e)
+    {
+        target = GameController.Instance.player.gameObject;
+        targetEntity = target.GetComponent("Entity") as Entity;
+        targetEntity.OnDead += TargetIsDead;
+    }
+
     // ---------------------------------------------------------------
     // Entity moving
     // ---------------------------------------------------------------
 
     protected override void calculMovement()
     {
+
+        // if out of range, nothing
+        if (dist > this.targetMaxDistance) { return; }
+
+        // if to far, run to target
+        if (dist < this.targetMinDistance) { return; }
+
         // position
         Vector3 diff = GetGameObjectPostition(target) - GetGameObjectPostition(this.gameObject);
         diff.Normalize();
@@ -70,6 +77,9 @@ public class IA_Entity : Entity {
 
     protected override void calculRotation()
     {
+        // if out of range, nothing
+        if (dist > this.targetMaxDistance) { return; }
+
         // rotation
         this.transform.LookAt(target.transform);
         this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
