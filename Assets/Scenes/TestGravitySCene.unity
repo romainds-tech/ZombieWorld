@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e8daf54dd70684abeea8f77d84bb2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 902915999}
+  player: {fileID: 902916004}
 --- !u!1 &695594791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7506247827639946801, guid: 3ec28ab8773101b4e9d31f9008ed1348, type: 3}
@@ -837,7 +837,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 524519352785326129, guid: 185c70435c930f8438fcf3e6dc0fffcd, type: 3}
   m_PrefabInstance: {fileID: 1784958544}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &902915999 stripped
+--- !u!114 &902916004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1165272191370934499, guid: 185c70435c930f8438fcf3e6dc0fffcd, type: 3}
   m_PrefabInstance: {fileID: 1784958544}
@@ -947,7 +947,7 @@ PrefabInstance:
     - target: {fileID: 587076380722073243, guid: 6f9be28bfd31ffc4e84dd3320afb6d7a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 902915999}
+      objectReference: {fileID: 902916004}
     - target: {fileID: 587076380722073245, guid: 6f9be28bfd31ffc4e84dd3320afb6d7a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1216,7 +1216,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3605308196600347705, guid: 185c70435c930f8438fcf3e6dc0fffcd, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 185c70435c930f8438fcf3e6dc0fffcd, type: 3}
 --- !u!1001 &1864099237
