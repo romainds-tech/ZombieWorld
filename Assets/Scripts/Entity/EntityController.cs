@@ -24,9 +24,9 @@ public class EntityController : MonoBehaviour
 
     public bool created = true;
 
-    void Start()
+    void Awake()
     {
-        SpawnPlayer();
+        
     }
 
     public void SpawnPlayer()

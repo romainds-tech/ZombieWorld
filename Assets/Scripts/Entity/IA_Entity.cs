@@ -21,7 +21,11 @@ public class IA_Entity : Entity {
     protected new void Start()
     {
         base.Start();
-        NewTarget(GameController.Instance.player);
+        this.target = GameController.Instance.player.gameObject;
+        Debug.Log(GameController.Instance.player.Life);
+        targetEntity = GameController.Instance.player;
+        targetEntity.OnDead += TargetIsDead;
+        // NewTarget(GameController.Instance.player);
         // GameController.Instance.player.OnSpawn += NewTarget;
     }
 

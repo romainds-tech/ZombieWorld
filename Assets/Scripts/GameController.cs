@@ -38,6 +38,8 @@ public class GameController : MonoBehaviour
     {
         player_spawn_point  = new Vector3(0, 32, 0);
         zombie_spawn_point = new Vector3(3, 32, 3);
+        EntityController.Instance.SpawnPlayer();
+        EntityController.Instance.SpawnZombie();
     }
 
 }

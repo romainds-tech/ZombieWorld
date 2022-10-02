@@ -67,9 +67,9 @@ public abstract class Entity : MonoBehaviour
         r.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rotation.y = transform.eulerAngles.y;
 
-        this.OnCreate.Invoke(this);
-        this.OnTakeDamage.Invoke(this);
-        this.OnDead.Invoke(this);
+        // this.OnCreate.Invoke(this);
+        // this.OnTakeDamage.Invoke(this);
+        // this.OnDead.Invoke(this);
     }
 
     protected void FixedUpdate()
