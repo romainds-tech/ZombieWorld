@@ -156,11 +156,11 @@ public abstract class Entity : MonoBehaviour
     // attaque entity action
     public void Attaque(Entity e)
     {
+        e.OnTakeDamage.Invoke(e);
         e.Life = e.Life - this.entityData.damage;
         if(e.Life > 0) {
             e.OnTakeDamage.Invoke(e);
         }
-        this.entityData.attaqueDelay = 1;
     }
 
     // die action
