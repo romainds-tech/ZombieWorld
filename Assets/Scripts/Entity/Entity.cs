@@ -38,8 +38,9 @@ public abstract class Entity : MonoBehaviour
     public delegate void EntityEvent(Entity e);
     public event EntityEvent OnSpawn;
     public event EntityEvent OnTakeDamage;
+    public event EntityEvent OnCreate;
     public event EntityEvent OnDead;
-    
+
     // Entity moving
     public Transform planet;
 
@@ -66,12 +67,20 @@ public abstract class Entity : MonoBehaviour
         r.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rotation.y = transform.eulerAngles.y;
 
-        // OnSpawn.Invoke(this);
+        this.OnCreate.Invoke(this);
+        this.OnTakeDamage.Invoke(this);
+        this.OnDead.Invoke(this);
     }
 
     protected void FixedUpdate()
     {
         Move();
+    }
+
+    public void TriggerCreation(Entity e)
+    {
+        // e.OnDead.Invoke(e);
+        //OnSpawn.Invoke(this);
     }
 
     // get object position
@@ -158,9 +167,6 @@ public abstract class Entity : MonoBehaviour
     {
         e.OnTakeDamage.Invoke(e);
         e.Life = e.Life - this.entityData.damage;
-        if(e.Life > 0) {
-            e.OnTakeDamage.Invoke(e);
-        }
     }
 
     // die action

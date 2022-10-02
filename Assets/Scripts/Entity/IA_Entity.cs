@@ -22,14 +22,15 @@ public class IA_Entity : Entity {
     {
         base.Start();
         NewTarget(GameController.Instance.player);
-        GameController.Instance.player.OnSpawn += NewTarget;
+        // GameController.Instance.player.OnSpawn += NewTarget;
     }
 
     // Update is called once per frame
     protected new void FixedUpdate()
     {
 
-        if (targetIsDead) {
+        if (targetIsDead)
+        {
             return;
         }
 
@@ -38,7 +39,8 @@ public class IA_Entity : Entity {
         dist = Vector3.Distance(GetGameObjectPostition(target), GetGameObjectPostition(this.gameObject));
 
         // if arround, attaque
-        if (dist < this.targetMinDistance) {
+        if (dist < this.targetMinDistance)
+        {
             this.TryAttaque();
         }
 
@@ -46,9 +48,11 @@ public class IA_Entity : Entity {
 
     private void NewTarget(Entity e)
     {
-        target = GameController.Instance.player.gameObject;
-        targetEntity = target.GetComponent("Entity") as Entity;
+        Debug.Log("new target");
+        this.target = GameController.Instance.player.gameObject;
+        targetEntity = GameController.Instance.player as Entity;
         targetEntity.OnDead += TargetIsDead;
+
     }
 
     // ---------------------------------------------------------------

@@ -13,7 +13,7 @@ public class Player_Entity : Entity
     // Entity utils
     // ---------------------------------------------------------------
 
-    void Awake()
+    void start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

@@ -13,6 +13,7 @@ public class LifeBar : MonoBehaviour
     {
         Player_Entity player = GameController.Instance.player;
         player.OnTakeDamage += UpdateLife;
+        player.OnDead += UpdateLife;
         lifeBar = this.gameObject.GetComponent<Slider>() as Slider;
     }
 

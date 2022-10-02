@@ -11,8 +11,9 @@ public class GameController : MonoBehaviour
         get
         {
             // initialize gamecontroller if not set yet
-            if (_instance == null)
+            if (_instance == null) {
                 _instance = FindObjectOfType<GameController>();
+            }
             return _instance;
         }
         private set
@@ -25,7 +26,7 @@ public class GameController : MonoBehaviour
     public IA_Entity ZombieModel;
 
     public Player_Entity player;
-    public Vector3 player_spawn_point;
+    public Vector3 player_spawn_point = new Vector3(0, 32, 0);
 
     public IA_Entity zombie;
     public Vector3 zombie_spawn_point;
@@ -37,20 +38,6 @@ public class GameController : MonoBehaviour
     {
         player_spawn_point  = new Vector3(0, 32, 0);
         zombie_spawn_point = new Vector3(3, 32, 3);
-        SpawnPlayer();
-        SpawnZombie();
-    }
-
-    public void SpawnPlayer()
-    {
-        player = Instantiate(this.playerModel, this.player_spawn_point, new Quaternion(0, 0, 0, 0));
-        player.gameObject.SetActive(true);
-    }
-
-    public void SpawnZombie()
-    {
-        zombie = Instantiate(this.ZombieModel, this.zombie_spawn_point, new Quaternion(0, 0, 0, 0));
-        zombie.gameObject.SetActive(true);
     }
 
 }
